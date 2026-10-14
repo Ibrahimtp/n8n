@@ -1,13 +1,13 @@
-# Deploy n8n on Render
+# n8n on Render
 
-> [!IMPORTANT]
-> **View full deployment instructions in the [**Render docs**](https://render.com/docs/deploy-n8n).**
+Infrastructure-as-code for self-hosting the [n8n](https://n8n.io/) workflow automation platform on Render, with a managed Postgres database.
 
-This template defines a [`render.yaml`](https://github.com/render-examples/n8n/blob/main/render.yaml) file you can use to deploy [n8n](https://n8n.io/) on Render. Click **Use this template** in the upper right to copy this template into your account as a new repo.
+## What it deploys (`render.yaml`)
+- A web service that runs the official n8n Docker image
+- A Render Postgres database for n8n data
+- Free instance types by default
 
-The `render.yaml` file defines the following resources:
+## Deploy
+Create a new Blueprint in Render pointing at this repo; Render reads `render.yaml` and provisions both services. Full guide: https://render.com/docs/deploy-n8n
 
-- A web service that pulls and runs the official n8n Docker image
-- A Render Postgres database that stores n8n data
-
-Each of the above uses a free instance type by default.
+_Based on Render's official n8n template._
